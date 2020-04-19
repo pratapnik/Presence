@@ -6,4 +6,7 @@
     <dimen name="margin_twelve_dp">12dp</dimen>
     <dimen name="margin_twenty_dp">20dp</dimen>
     <dimen name="size_splash_icon">140dp</dimen>
+    <dimen name="margin_fourty_dp">40dp</dimen>
+    <dimen name="button_radius">12dp</dimen>
+    <dimen name="button_margin">32dp</dimen>
 </resources>
