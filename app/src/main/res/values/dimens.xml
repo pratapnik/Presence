@@ -2,4 +2,6 @@
 <resources>
     <dimen name="padding_eight_dp">8dp</dimen>
     <dimen name="text_sixteen_sp">16sp</dimen>
+    <dimen name="margin_twenty_dp">20dp</dimen>
+    <dimen name="size_splash_icon">140dp</dimen>
 </resources>
