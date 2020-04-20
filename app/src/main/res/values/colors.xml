@@ -7,4 +7,5 @@
     <color name="color_splash_icon_background">@android:color/white</color>
     <color name="color_custom_button">#5348A7</color>
     <color name="color_custom_button_pressed">#805348A7</color>
+    <color name="color_white">#FFFFFF</color>
 </resources>

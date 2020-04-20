@@ -1,7 +1,9 @@
 package com.example.presence
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_user_details.*
 
 
 class UserDetailsActivity : AppCompatActivity() {
@@ -12,5 +14,9 @@ class UserDetailsActivity : AppCompatActivity() {
 
         supportActionBar?.hide()
 
+        btnAddSubjects.setOnClickListener {
+            val addSubjectsActivity = Intent(this, AddSubjectsActivity::class.java)
+            startActivity(addSubjectsActivity)
+        }
     }
 }
