@@ -5,19 +5,9 @@
     android:id="@+id/clSplashScreen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/ic_splash_background"
     tools:context=".SplashActivity">
 
-    <ImageView
-        android:id="@+id/ivSplashBg"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/splash_bg"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/splash_bg" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
@@ -46,5 +36,6 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

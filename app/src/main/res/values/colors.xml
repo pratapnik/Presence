@@ -5,4 +5,5 @@
     <color name="colorAccent">#03DAC5</color>
     <color name="color_app_icon_background">#38C5FC</color>
     <color name="color_splash_icon_background">@android:color/white</color>
+    <color name="colorSplashDark">#33297D</color>
 </resources>
