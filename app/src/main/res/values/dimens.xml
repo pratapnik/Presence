@@ -2,4 +2,13 @@
 <resources>
     <dimen name="padding_eight_dp">8dp</dimen>
     <dimen name="text_sixteen_sp">16sp</dimen>
+    <dimen name="action_bar_text_size">20sp</dimen>
+    <dimen name="margin_twenty_four_dp">24dp</dimen>
+    <dimen name="margin_twelve_dp">12dp</dimen>
+    <dimen name="margin_twenty_dp">20dp</dimen>
+    <dimen name="size_splash_icon">140dp</dimen>
+    <dimen name="margin_fourty_dp">40dp</dimen>
+    <dimen name="button_radius">12dp</dimen>
+    <dimen name="button_margin">32dp</dimen>
+    <dimen name="stroke_width">2dp</dimen>
 </resources>

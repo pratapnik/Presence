@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Presence</string>
+    <string name="label_your_name_hint">Your Name</string>
+    <string name="label_institution_name_hint">College/School</string>
+    <string name="label_class_hint">Semester/Class</string>
+    <string name="label_add_subjects_button">Add Subjects</string>
+    <string name="label_user_details_activity">Education</string>
+
 </resources>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".UserDetailsActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glVerticalLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.07"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glVerticalRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.93"
+        />
+
+    <ImageView
+        android:id="@+id/ivSubjectsLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_teacher"
+        android:layout_marginTop="@dimen/margin_fourty_dp"
+        app:layout_constraintStart_toStartOf="@id/glVerticalLeft"
+        app:layout_constraintEnd_toEndOf="@id/glVerticalRight"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/otfUserName"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/otfUserName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/label_your_name_hint"
+        android:layout_marginTop="@dimen/margin_twenty_four_dp"
+        app:layout_constraintStart_toStartOf="@id/glVerticalLeft"
+        app:layout_constraintEnd_toStartOf="@id/glVerticalRight"
+        app:layout_constraintTop_toBottomOf="@id/ivSubjectsLogo"
+        app:layout_constraintBottom_toTopOf="@id/otfInstitutionName"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_regular"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/otfInstitutionName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/label_institution_name_hint"
+        android:layout_marginTop="@dimen/margin_twenty_four_dp"
+        app:layout_constraintStart_toStartOf="@id/glVerticalLeft"
+        app:layout_constraintEnd_toStartOf="@id/glVerticalRight"
+        app:layout_constraintTop_toBottomOf="@id/otfUserName"
+        app:layout_constraintBottom_toTopOf="@id/otfClass"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etInstitutionName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_regular"
+
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/otfClass"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/label_class_hint"
+        android:layout_marginTop="@dimen/margin_twenty_four_dp"
+        app:layout_constraintStart_toStartOf="@id/glVerticalLeft"
+        app:layout_constraintEnd_toStartOf="@id/glVerticalRight"
+        app:layout_constraintTop_toBottomOf="@id/otfInstitutionName"
+        app:layout_constraintBottom_toTopOf="@id/btnAddSubjects"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etClass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_regular"
+            android:inputType="number"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnAddSubjects"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/font_bold"
+        android:textSize="@dimen/text_sixteen_sp"
+        style="@style/CustomButton.Filled"
+        android:layout_marginTop="@dimen/button_margin"
+        android:drawableEnd="@drawable/ic_arrow_forward"
+        android:text="@string/label_add_subjects_button"
+        app:layout_constraintTop_toBottomOf="@id/otfClass"
+        app:layout_constraintStart_toStartOf="@id/otfClass"
+        app:layout_constraintEnd_toEndOf="@id/otfClass"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
