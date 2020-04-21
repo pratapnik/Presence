@@ -5,5 +5,7 @@
     <string name="label_class_hint">Semester/Class</string>
     <string name="label_add_subjects_button">Add Subjects</string>
     <string name="label_user_details_activity">Education</string>
+    <string name="label_subject_title_hint">Subject Title</string>
+    <string name="label_create_time_table_button">Create Time Table</string>
 
 </resources>
