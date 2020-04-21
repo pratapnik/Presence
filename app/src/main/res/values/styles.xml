@@ -22,4 +22,7 @@
     <style name="CustomButton.Filled" parent="Widget.MaterialComponents.Button">
         <item name="android:background">@drawable/custom_button_background</item>
     </style>
+    <style name="CustomAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/custom_dialog_background</item>
+    </style>
 </resources>

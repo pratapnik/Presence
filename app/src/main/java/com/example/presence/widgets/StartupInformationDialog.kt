@@ -18,7 +18,7 @@ class StartupInformationDialog: DialogFragment() {
         var layoutInflater: LayoutInflater? = activity?.layoutInflater
         val view = layoutInflater?.inflate(R.layout.startup_dialog_layout, null)
 
-        startupDialog = AlertDialog.Builder(activity)
+        startupDialog = AlertDialog.Builder(activity, R.style.CustomAlertDialog)
         startupDialog.setView(view)
 
         btnOk = view?.findViewById(R.id.btnStartupDialogOk)!!
