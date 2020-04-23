@@ -7,5 +7,11 @@
     <string name="label_user_details_activity">Education</string>
     <string name="label_subject_title_hint">Subject Title</string>
     <string name="label_create_time_table_button">Create Time Table</string>
+    <string name="label_start_up_dialog_title">Notice</string>
+    <string name="label_start_up_dialog_description">We will take few details from you for the sole
+        purpose of creating a temporary profile. All of this information will be stored inside your phone.
+        Nothing is uploaded to our servers. Thank You!</string>
+    <string name="label_button_startup_dialog_title">OK</string>
+    <string name="label_start_up_dialog_tag">startupdialog</string>
 
 </resources>
