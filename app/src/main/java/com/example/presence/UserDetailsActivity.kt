@@ -7,6 +7,8 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
+import com.example.presence.ui.UserInterfaceHelper
+import com.example.presence.ui.UserInterfaceService
 import com.example.presence.widgets.StartupInformationDialog
 import kotlinx.android.synthetic.main.activity_user_details.*
 
@@ -17,14 +19,14 @@ class UserDetailsActivity : AppCompatActivity() {
     lateinit var userName: String
     lateinit var institutionName: String
     lateinit var classValue: String
+    lateinit var userInterfaceService: UserInterfaceService
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_details)
 
-        supportActionBar?.hide()
+        userInterfaceService = UserInterfaceHelper()
 
-        changeStatusBarColor()
         openStartupDialog()
 
         etUserName.addTextChangedListener(object : TextWatcher {
@@ -135,12 +137,6 @@ class UserDetailsActivity : AppCompatActivity() {
             fragmentTransaction,
             resources.getString(R.string.label_start_up_dialog_tag)
         )
-    }
-
-    private fun changeStatusBarColor() {
-        val window = window
-        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        window.statusBarColor = Color.TRANSPARENT;
     }
 
     private fun isTextFieldEmpty(editTextString: String): Boolean {
