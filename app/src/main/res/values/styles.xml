@@ -23,7 +23,21 @@
     <style name="CustomButton.Filled" parent="Widget.MaterialComponents.Button">
         <item name="android:background">@drawable/custom_button_background</item>
     </style>
+
     <style name="CustomAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
         <item name="android:windowBackground">@drawable/custom_dialog_background</item>
     </style>
+    
+    <style name="CustomChipStyle" parent="Widget.MaterialComponents.Chip.Filter">
+        <item name="chipBackgroundColor">@color/colorPrimary</item>
+        <item name="android:textColor">@color/color_white</item>
+        <item name="checkedIconTint">@color/color_white</item>
+        <item name="chipIconSize">@dimen/button_radius</item>
+        <item name="android:textAppearance">@style/CustomTextSize</item>
+    </style>
+
+    <style name="CustomTextSize">
+        <item name="android:textSize">@dimen/chip_text_size</item>
+    </style>
+
 </resources>

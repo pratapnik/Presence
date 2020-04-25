@@ -3,6 +3,8 @@
     <dimen name="padding_eight_dp">8dp</dimen>
     <dimen name="text_sixteen_sp">16sp</dimen>
     <dimen name="action_bar_text_size">28sp</dimen>
+    <dimen name="chip_text_size">12sp</dimen>
+    <dimen name="add_subjects_dialog_title_size">20sp</dimen>
     <dimen name="margin_twenty_four_dp">24dp</dimen>
     <dimen name="margin_twelve_dp">12dp</dimen>
     <dimen name="margin_twenty_dp">20dp</dimen>
@@ -11,4 +13,5 @@
     <dimen name="button_radius">12dp</dimen>
     <dimen name="button_margin">32dp</dimen>
     <dimen name="stroke_width">2dp</dimen>
+    <dimen name="margin_add_subjects_button">16dp</dimen>
 </resources>

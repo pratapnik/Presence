@@ -6,4 +6,41 @@
     android:layout_height="match_parent"
     tools:context=".AddSubjectsActivity">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSubjectsList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/margin_add_subjects_button"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/glHorizontal"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9"
+        />
+
+    <Button
+        android:id="@+id/btnAddSubjects"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/font_bold"
+        android:textSize="@dimen/text_sixteen_sp"
+        style="@style/CustomButton.Filled"
+        android:layout_margin="@dimen/margin_add_subjects_button"
+        android:text="@string/title_add_subject"
+        android:drawableLeft="@drawable/ic_add"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/glHorizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
