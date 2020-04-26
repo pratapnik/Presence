@@ -1,11 +1,9 @@
 package com.example.presence
 
 import android.content.Intent
-import android.graphics.Color
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import com.example.presence.ui.UserInterfaceHelper
 import com.example.presence.ui.UserInterfaceService

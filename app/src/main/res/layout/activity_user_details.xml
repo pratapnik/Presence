@@ -28,7 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_teacher"
-        android:layout_marginTop="@dimen/margin_fourty_dp"
+        android:layout_marginTop="@dimen/button_margin"
         app:layout_constraintStart_toStartOf="@id/glVerticalLeft"
         app:layout_constraintEnd_toEndOf="@id/glVerticalRight"
         app:layout_constraintTop_toTopOf="parent"
@@ -105,6 +105,7 @@
             />
 
     </com.google.android.material.textfield.TextInputLayout>
+
 
     <Button
         android:id="@+id/btnAddSubjects"
