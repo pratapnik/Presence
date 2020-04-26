@@ -8,6 +8,7 @@
     <color name="color_custom_button">#536DFE</color>
     <color name="color_custom_button_pressed">#80536DFE</color>
     <color name="color_white">#FFFFFF</color>
+    <color name="color_splash_dark">#43348F</color>
     <color name="color_helper_text">#FC0000</color>
     <color name="color_cancel_button">#E53935</color>
     <color name="color_save_button">#00796B</color>
