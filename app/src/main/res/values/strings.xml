@@ -3,7 +3,7 @@
     <string name="label_your_name_hint">Your Name</string>
     <string name="label_institution_name_hint">College/School</string>
     <string name="label_class_hint">Semester/Class</string>
-    <string name="label_add_subjects_button">Add Subjects</string>
+    <string name="label_submit_button">submit</string>
     <string name="label_user_details_activity">Education</string>
     <string name="label_subject_title_hint">Subject Title</string>
     <string name="label_create_time_table_button">Create Time Table</string>
@@ -12,5 +12,20 @@
         Nothing is uploaded to our servers. Thank You!</string>
     <string name="label_button_startup_dialog_title">OK</string>
     <string name="label_start_up_dialog_tag">startupdialog</string>
+    <string name="label_add_subject_dialog">add subject</string>
+    <string name="title_add_subject">Add subject</string>
+
+    <string name="chip_monday_title">Monday</string>
+    <string name="chip_tuesday_title">Tuesday</string>
+    <string name="chip_wednesday_title">Wednesday</string>
+    <string name="chip_thursday_title">Thursday</string>
+    <string name="chip_friday_title">Friday</string>
+    <string name="chip_saturday_title">Saturday</string>
+    <string name="subject_edit_text_hint">Subject</string>
+    <string name="add_subjects_details_dialog_title">Subject Details</string>
+    <string name="days_of_class_title">Choose Days of Class:</string>
+    <string name="cancel_button_title">Cancel</string>
+    <string name="btn_save_title">Save</string>
+
 
 </resources>

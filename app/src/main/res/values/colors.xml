@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#5348A7</color>
-    <color name="colorPrimaryDark">#5348A7</color>
+    <color name="colorPrimary">#536DFE</color>
+    <color name="colorPrimaryDark">#536DFE</color>
     <color name="colorAccent">#03DAC5</color>
     <color name="color_app_icon_background">#38C5FC</color>
     <color name="color_splash_icon_background">@android:color/white</color>
-    <color name="color_custom_button">#5348A7</color>
-    <color name="color_custom_button_pressed">#805348A7</color>
+    <color name="color_custom_button">#536DFE</color>
+    <color name="color_custom_button_pressed">#80536DFE</color>
     <color name="color_white">#FFFFFF</color>
     <color name="color_splash_dark">#43348F</color>
     <color name="color_helper_text">#FC0000</color>
+    <color name="color_cancel_button">#E53935</color>
+    <color name="color_save_button">#00796B</color>
 
     <!-- Dark Text Color for Light Background -->
     <color name="textDarkPrimary">#DE000000</color> <!--DE for %87 opacity-->

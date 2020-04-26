@@ -4,84 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:animateLayoutChanges="true"
     tools:context=".AddSubjectsActivity">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/glVerticalLeft"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.07"
-        />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/glVerticalRight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.93"
-        />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/otfSubjectTitle"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_twenty_four_dp"
-        android:layout_marginEnd="@dimen/margin_twelve_dp"
-        android:hint="@string/label_subject_title_hint"
-        app:layout_constraintEnd_toStartOf="@+id/btnAddSubject"
-        app:layout_constraintStart_toStartOf="@+id/glVerticalLeft"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <EditText
-            android:id="@+id/etSubjectTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/font_regular"
-            android:inputType="textCapWords" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <Button
-        android:id="@+id/btnAddSubject"
-        style="@style/CustomButton.Filled"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add"
-        app:layout_constraintBottom_toBottomOf="@+id/otfSubjectTitle"
-        app:layout_constraintEnd_toStartOf="@+id/glVerticalRight"
-        app:layout_constraintTop_toTopOf="@+id/otfSubjectTitle" />
-
-    <ScrollView
-        android:id="@+id/svSubjectList"
-        android:layout_width="0dp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSubjectsList"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="@dimen/margin_twenty_four_dp"
-        android:layout_marginBottom="@dimen/margin_twenty_four_dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnAddSubjectNext"
-        app:layout_constraintEnd_toStartOf="@+id/glVerticalRight"
-        app:layout_constraintStart_toStartOf="@+id/glVerticalLeft"
-        app:layout_constraintTop_toBottomOf="@+id/otfSubjectTitle">
+        android:layout_margin="@dimen/margin_add_subjects_button"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/glHorizontal"
+        />
 
-        <LinearLayout
-            android:id="@+id/llSubjectList"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-
-    </ScrollView>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9"
+        />
 
     <Button
-        style="@style/CustomButton.Filled"
-        android:id="@+id/btnAddSubjectNext"
+        android:id="@+id/btnAddSubjects"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/font_bold"
-        android:text="@string/label_create_time_table_button"
-        android:layout_marginBottom="@dimen/margin_twenty_four_dp"
+        android:textSize="@dimen/text_sixteen_sp"
+        style="@style/CustomButton.Filled"
+        android:layout_margin="@dimen/margin_add_subjects_button"
+        android:text="@string/title_add_subject"
+        android:drawableLeft="@drawable/ic_add"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/glHorizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/glVerticalRight"
-        app:layout_constraintStart_toStartOf="@+id/glVerticalLeft" />
+        />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
