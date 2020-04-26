@@ -15,7 +15,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/glHorizontal"
-        />
+        tools:listitem="@layout/add_subject_item"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/glHorizontal"

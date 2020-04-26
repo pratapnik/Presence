@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey;
 
 @Entity(tableName = "subject")
 public class Subject {
-    @PrimaryKey @NonNull
+    @PrimaryKey(autoGenerate = true) @NonNull
     private int id;
 
     @ColumnInfo(name = "subject")
@@ -29,8 +29,8 @@ public class Subject {
     @ColumnInfo(name = "daysOfWeek")
     private String daysOfWeek;
 
-    public Subject(int id, String subjectName, int classCount, int classAbsent, int classCancel, String daysOfWeek) {
-        this.id = id;
+    @Ignore
+    public Subject(String subjectName, int classCount, int classAbsent, int classCancel, String daysOfWeek) {
         this.subjectName = subjectName;
         this.classCount = classCount;
         this.classAbsent = classAbsent;
@@ -38,8 +38,8 @@ public class Subject {
         this.daysOfWeek = daysOfWeek;
     }
 
-    @Ignore
-    public Subject(String subjectName, int classCount, int classAbsent, int classCancel, String daysOfWeek) {
+    public Subject(int id, String subjectName, int classCount, int classAbsent, int classCancel, String daysOfWeek) {
+        this.id = id;
         this.subjectName = subjectName;
         this.classCount = classCount;
         this.classAbsent = classAbsent;
