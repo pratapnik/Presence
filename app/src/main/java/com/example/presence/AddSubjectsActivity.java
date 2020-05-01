@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -66,7 +67,7 @@ public class AddSubjectsActivity extends AppCompatActivity implements AddSubject
     }
 
     @Override
-    public void onSaveDetailsListener(@NotNull String subjectName, @NotNull String daysOfClass) {
+    public void onSaveDetailsListener(@NotNull String subjectName, @NotNull String daysOfClass, int subjectPercent) {
         final Subject item = new Subject(subjectName, 0, 0, 0, daysOfClass);
         subjectViewModel.insert(item);
     }

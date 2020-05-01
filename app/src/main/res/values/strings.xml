@@ -27,6 +27,7 @@
     <string name="cancel_button_title">Cancel</string>
     <string name="btn_save_title">Save</string>
     <string name="label_overall_attendance_percent_hint">Overall Attendance Percent</string>
+    <string name="label_attendance_percent_hint">Attendance Percent</string>
 
 
 </resources>
