@@ -28,6 +28,10 @@
     <string name="btn_save_title">Save</string>
     <string name="label_overall_attendance_percent_hint">Overall Attendance Percent</string>
     <string name="label_attendance_percent_hint">Attendance Percent</string>
-
+    <string name="label_user_name_helper_text">Name cannot be empty</string>
+    <string name="label_institution_name_helper_text">Institution name cannot be empty</string>
+    <string name="label_class_value_helper_text">Class/Semester cannot be empty</string>
+    <string name="label_overall_percent_helper_text">Please enter minimum attendance percent</string>
+    <string name="label_user_details_shared_preference">UserDetailsPref</string>
 
 </resources>

@@ -1,5 +1,9 @@
 package com.example.presence;
 
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
@@ -7,12 +11,6 @@ import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
 
 import com.example.presence.adapters.SubjectAdapter;
 import com.example.presence.database.Subject;
@@ -59,7 +57,7 @@ public class AddSubjectsActivity extends AppCompatActivity implements AddSubject
         });
     }
 
-    private void openAddSubjectsDialog(){
+    private void openAddSubjectsDialog() {
         addSubjectDialog = new AddSubjectDialog(this);
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.addToBackStack(null);

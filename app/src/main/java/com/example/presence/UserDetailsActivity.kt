@@ -14,9 +14,6 @@ import kotlinx.android.synthetic.main.activity_user_details.*
 class UserDetailsActivity : AppCompatActivity() {
 
     private lateinit var startupDialog: StartupInformationDialog
-    lateinit var userName: String
-    lateinit var institutionName: String
-    lateinit var classValue: String
     lateinit var userInterfaceService: UserInterfaceService
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -95,32 +92,30 @@ class UserDetailsActivity : AppCompatActivity() {
             }
         })
 
+        etAttendancePercent.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(s: Editable) {
+            }
+
+            override fun beforeTextChanged(
+                s: CharSequence,
+                start: Int,
+                count: Int,
+                after: Int
+            ) {
+            }
+
+            override fun onTextChanged(
+                s: CharSequence,
+                start: Int,
+                before: Int,
+                count: Int
+            ) {
+                otfAttendancePercent.isHelperTextEnabled = s.isEmpty()
+            }
+        })
+
         btnAddSubjects.setOnClickListener {
-
-            getValuesFromViews()
-
-            var goToAddSubjects = true
-
-            if (isTextFieldEmpty(userName)) {
-                otfUserName.helperText = "Name cannot be empty"
-                otfUserName.error = ""
-                otfUserName.setErrorIconDrawable(R.drawable.ic_error_outline)
-                goToAddSubjects = false
-            }
-            if (isTextFieldEmpty(institutionName)) {
-                otfInstitutionName.helperText = "Institution name cannot be empty"
-                otfInstitutionName.error = ""
-                otfInstitutionName.setErrorIconDrawable(R.drawable.ic_error_outline)
-                goToAddSubjects = false
-            }
-            if (isTextFieldEmpty(classValue)) {
-                otfClass.helperText = "Class/Semester cannot be empty"
-                otfClass.error = ""
-                otfClass.setErrorIconDrawable(R.drawable.ic_error_outline)
-                goToAddSubjects = false
-            }
-
-            if (goToAddSubjects) {
+            if (validateInputTexts()) {
                 val addSubjectsActivity = Intent(this, AddSubjectsActivity::class.java)
                 startActivity(addSubjectsActivity)
             }
@@ -137,13 +132,35 @@ class UserDetailsActivity : AppCompatActivity() {
         )
     }
 
-    private fun isTextFieldEmpty(editTextString: String): Boolean {
-        return editTextString.isEmpty()
-    }
+    private fun validateInputTexts(): Boolean {
+        var isValid = true
+        if (etUserName.text.toString().isEmpty()) {
+            otfUserName.helperText = resources.getString(R.string.label_user_name_helper_text)
+            otfUserName.error = ""
+            otfUserName.setErrorIconDrawable(R.drawable.ic_error_outline)
+            isValid = false
+        }
+        if (etInstitutionName.text.toString().isEmpty()) {
+            otfInstitutionName.helperText =
+                resources.getString(R.string.label_institution_name_helper_text)
+            otfInstitutionName.error = ""
+            otfInstitutionName.setErrorIconDrawable(R.drawable.ic_error_outline)
+            isValid = false
+        }
+        if (etClass.text.toString().isEmpty()) {
+            otfClass.helperText = resources.getString(R.string.label_class_value_helper_text)
+            otfClass.error = ""
+            otfClass.setErrorIconDrawable(R.drawable.ic_error_outline)
+            isValid = false
+        }
+        if (etAttendancePercent.text.toString().isEmpty()) {
+            otfAttendancePercent.helperText =
+                resources.getString(R.string.label_overall_attendance_percent_hint)
+            otfAttendancePercent.error = ""
+            otfAttendancePercent.setErrorIconDrawable(R.drawable.ic_error_outline)
+            isValid = false
+        }
 
-    private fun getValuesFromViews() {
-        userName = etUserName.text.toString()
-        institutionName = etInstitutionName.text.toString()
-        classValue = etClass.text.toString()
+        return isValid
     }
 }
