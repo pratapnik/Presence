@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.room.util.StringUtil;
 
 import com.example.presence.R;
 import com.example.presence.database.Subject;
@@ -43,7 +44,8 @@ public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.SubjectH
     public void onBindViewHolder(@NonNull SubjectAdapter.SubjectHolder holder, int position) {
         Subject newSubject = subjectList.get(position);
         holder.subjectName.setText(newSubject.getSubjectName());
-        holder.daysOfWeek.setText(newSubject.getDaysOfWeek());
+        String daysOfWeek = newSubject.getDaysOfWeek().replaceAll(","," ");
+        holder.daysOfWeek.setText(daysOfWeek);
     }
 
     @Override

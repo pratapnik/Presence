@@ -26,6 +26,7 @@
     <string name="days_of_class_title">Choose Days of Class:</string>
     <string name="cancel_button_title">Cancel</string>
     <string name="btn_save_title">Save</string>
+    <string name="label_overall_attendance_percent_hint">Overall Attendance Percent</string>
 
 
 </resources>

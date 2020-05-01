@@ -93,7 +93,7 @@
         app:layout_constraintStart_toStartOf="@id/glVerticalLeft"
         app:layout_constraintEnd_toStartOf="@id/glVerticalRight"
         app:layout_constraintTop_toBottomOf="@id/otfInstitutionName"
-        app:layout_constraintBottom_toTopOf="@id/btnAddSubjects"
+        app:layout_constraintBottom_toTopOf="@id/otfAttendancePercent"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -107,6 +107,32 @@
     </com.google.android.material.textfield.TextInputLayout>
 
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/otfAttendancePercent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/label_overall_attendance_percent_hint"
+        app:helperTextTextColor="@color/color_helper_text"
+        app:errorEnabled="true"
+        android:layout_marginTop="@dimen/margin_twenty_four_dp"
+        app:layout_constraintStart_toStartOf="@id/glVerticalLeft"
+        app:layout_constraintEnd_toStartOf="@id/glVerticalRight"
+        app:layout_constraintTop_toBottomOf="@id/otfClass"
+        app:layout_constraintBottom_toTopOf="@id/btnAddSubjects"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etAttendancePercent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_regular"
+            android:inputType="number"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
     <Button
         android:id="@+id/btnAddSubjects"
         android:layout_width="0dp"
@@ -117,7 +143,7 @@
         android:layout_marginTop="@dimen/margin_twenty_four_dp"
         android:drawableEnd="@drawable/ic_arrow_forward"
         android:text="@string/label_submit_button"
-        app:layout_constraintTop_toBottomOf="@id/otfClass"
+        app:layout_constraintTop_toBottomOf="@id/otfAttendancePercent"
         app:layout_constraintStart_toStartOf="@id/otfClass"
         app:layout_constraintEnd_toEndOf="@id/otfClass"
         />
