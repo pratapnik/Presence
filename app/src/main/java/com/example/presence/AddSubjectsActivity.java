@@ -1,6 +1,8 @@
 package com.example.presence;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -33,6 +35,11 @@ public class AddSubjectsActivity extends AppCompatActivity implements AddSubject
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_subjects);
+
+        //Temporary code for userdetails
+        SharedPreferences sharedPreferences = getSharedPreferences("sharedPref", 0);
+        Log.d("nikhil", sharedPreferences.getString("user_name","null")+" "+
+                sharedPreferences.getInt("class_value",0));
 
         rvSubjectsList = findViewById(R.id.rvSubjectsList);
         subjectAdapter = new SubjectAdapter(this);

@@ -1,6 +1,8 @@
 package com.example.presence
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -15,14 +17,21 @@ class UserDetailsActivity : AppCompatActivity() {
 
     private lateinit var startupDialog: StartupInformationDialog
     lateinit var userInterfaceService: UserInterfaceService
+    lateinit var sharedPreferences: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_details)
 
         userInterfaceService = UserInterfaceHelper()
+        sharedPreferences = getSharedPreferences("sharedPref", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
 
         openStartupDialog()
+
+        if(sharedPreferences.getInt("class_value",0) != 0){
+            openAddSubjectActivity()
+        }
 
         etUserName.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable) {
@@ -116,10 +125,20 @@ class UserDetailsActivity : AppCompatActivity() {
 
         btnAddSubjects.setOnClickListener {
             if (validateInputTexts()) {
-                val addSubjectsActivity = Intent(this, AddSubjectsActivity::class.java)
-                startActivity(addSubjectsActivity)
+                editor.putString("user_name", etUserName.text.toString())
+                editor.putString("institute_name", etInstitutionName.text.toString())
+                editor.putInt("class_value", etClass.text.toString().toInt())
+                editor.putInt("percentage", etAttendancePercent.text.toString().toInt())
+                editor.apply()
+
+                openAddSubjectActivity()
             }
         }
+    }
+
+    private fun openAddSubjectActivity(){
+        val addSubjectsActivity = Intent(this, AddSubjectsActivity::class.java)
+        startActivity(addSubjectsActivity)
     }
 
     private fun openStartupDialog() {
