@@ -33,5 +33,7 @@
     <string name="label_class_value_helper_text">Class/Semester cannot be empty</string>
     <string name="label_overall_percent_helper_text">Please enter minimum attendance percent</string>
     <string name="label_user_details_shared_preference">UserDetailsPref</string>
+    <string name="label_percent_less_than_100_helper_text">Attendance percent can be maximum 100%</string>
+    <string name="label_max_class_helper_text">Class or Semester cannot be greater than 12</string>
 
 </resources>

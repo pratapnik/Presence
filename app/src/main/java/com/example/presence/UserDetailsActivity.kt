@@ -180,6 +180,21 @@ class UserDetailsActivity : AppCompatActivity() {
             isValid = false
         }
 
+        if (etClass.text.toString().toInt()>12) {
+            otfClass.helperText = resources.getString(R.string.label_max_class_helper_text)
+            otfClass.error = ""
+            otfClass.setErrorIconDrawable(R.drawable.ic_error_outline)
+            isValid = false
+        }
+
+        if (etAttendancePercent.text.toString().toInt()>100) {
+            otfAttendancePercent.helperText =
+                resources.getString(R.string.label_percent_less_than_100_helper_text)
+            otfAttendancePercent.error = ""
+            otfAttendancePercent.setErrorIconDrawable(R.drawable.ic_error_outline)
+            isValid = false
+        }
+
         return isValid
     }
 }

@@ -144,6 +144,11 @@ class AddSubjectDialog(private val saveDetailsListener: SaveDetailsListener) : D
             otfAttendance.error = ""
             otfAttendance.setErrorIconDrawable(R.drawable.ic_error_outline)
         }
+        else if(etAttendance.text.toString().toInt() >100){
+            otfAttendance.helperText = resources.getString(R.string.label_percent_less_than_100_helper_text)
+            otfAttendance.error = ""
+            otfAttendance.setErrorIconDrawable(R.drawable.ic_error_outline)
+        }
         else {
             subjectName = etSubjectName.text.toString()
             if (chipMonday.isChecked)
