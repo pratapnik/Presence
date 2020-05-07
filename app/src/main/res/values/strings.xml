@@ -36,4 +36,7 @@
     <string name="label_percent_less_than_100_helper_text">Attendance percent can be maximum 100%</string>
     <string name="label_max_class_helper_text">Class or Semester cannot be greater than 12</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
