@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#536DFE</color>
     <color name="colorPrimaryDark">#536DFE</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="colorAccent">#536DFE</color>
     <color name="color_app_icon_background">#38C5FC</color>
     <color name="color_splash_icon_background">@android:color/white</color>
     <color name="color_custom_button">#536DFE</color>

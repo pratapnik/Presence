@@ -1,21 +1,42 @@
 package com.example.presence.fragments
 
+import android.content.SharedPreferences
+import android.content.SharedPreferences.OnSharedPreferenceChangeListener
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-
+import androidx.appcompat.app.AppCompatDelegate
+import androidx.preference.PreferenceFragmentCompat
 import com.example.presence.R
 
-class SettingsFragment : Fragment() {
+class SettingsFragment : PreferenceFragmentCompat() {
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_settings, container, false)
+    val PREF_DARK_MODE = "prefDarkMode"
+
+    private lateinit var sharedPreferenceChangeListener: SharedPreferences.OnSharedPreferenceChangeListener
+
+    override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
+
+        addPreferencesFromResource(R.xml.settings_layout)
+
+        sharedPreferenceChangeListener = OnSharedPreferenceChangeListener { prefs, key ->
+           if(key==PREF_DARK_MODE && prefs.getBoolean(PREF_DARK_MODE, false)){
+               AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+           }
+            else{
+               AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+           }
+        }
+
+
+    }
+
+    override fun onResume() {
+        super.onResume()
+        preferenceScreen.sharedPreferences.registerOnSharedPreferenceChangeListener(sharedPreferenceChangeListener)
+    }
+
+    override fun onPause() {
+        super.onPause()
+        preferenceScreen.sharedPreferences.unregisterOnSharedPreferenceChangeListener(sharedPreferenceChangeListener)
     }
 
 }

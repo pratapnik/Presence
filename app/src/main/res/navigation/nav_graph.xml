@@ -12,11 +12,15 @@
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_homeFragment_to_settingsFragment"
-            app:destination="@id/settingsFragment" />
+            app:destination="@id/settingsFragment"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:enterAnim="@anim/fragment_fade_enter"
+            />
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.example.presence.fragments.SettingsFragment"
         android:label="fragment_settings"
-        tools:layout="@layout/fragment_settings" />
+        tools:layout="@layout/fragment_settings"
+        />
 </navigation>

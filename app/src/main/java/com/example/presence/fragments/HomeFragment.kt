@@ -1,20 +1,17 @@
 package com.example.presence.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import androidx.navigation.NavHostController
-import androidx.navigation.Navigation
+import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
-
 import com.example.presence.R
 
 class HomeFragment : Fragment() {
 
-    lateinit var btnSettings : Button
+    lateinit var btnSettings: Button
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
