@@ -26,7 +26,6 @@ class SettingsFragment : PreferenceFragmentCompat() {
            }
         }
 
-
     }
 
     override fun onResume() {

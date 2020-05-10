@@ -40,5 +40,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="label_settings_dark_mode">Dark Mode</string>
     <string name="label_settings_dark_mode_summary">Enable this setting to change App Theme</string>
+    <string name="label_settings_add_subject">Add Subject</string>
 
 </resources>

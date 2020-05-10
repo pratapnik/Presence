@@ -8,4 +8,12 @@
         android:summary="@string/label_settings_dark_mode_summary"
         android:icon="@drawable/ic_dark_mode"
         />
+
+    <EditTextPreference
+        android:key="prefAddSubject"
+        android:title="@string/label_settings_add_subject"
+        android:icon="@drawable/ic_add_black"
+        android:dialogIcon="@drawable/ic_add_black"
+        android:dialogTitle="@string/label_settings_add_subject"
+        />
 </PreferenceScreen>
