@@ -24,6 +24,13 @@
         <item name="android:background">@drawable/custom_button_background</item>
     </style>
 
+    <style name="CustomButtonNotFilled" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:padding">@dimen/padding_eight_dp</item>
+        <item name="fontFamily">@font/font_bold</item>
+        <item name="strokeWidth">@dimen/stroke_width</item>
+        <item name="strokeColor">@color/colorPrimary</item>
+    </style>
+
     <style name="CustomAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
         <item name="android:windowBackground">@drawable/custom_dialog_background</item>
     </style>
@@ -38,6 +45,13 @@
 
     <style name="CustomTextSize">
         <item name="android:textSize">@dimen/chip_text_size</item>
+    </style>
+    
+    <style name="CustomFloatingActionButton" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="backgroundTint">@color/colorPrimary</item>
+        <item name="elevation">@dimen/default_elevation</item>
+        <item name="tint">@color/color_white</item>
+        <item name="rippleColor">@color/color_custom_button_pressed</item>
     </style>
 
 </resources>

@@ -15,4 +15,5 @@
     <dimen name="stroke_width">2dp</dimen>
     <dimen name="margin_add_subjects_button">16dp</dimen>
     <dimen name="margin_eight_dp">8dp</dimen>
+    <dimen name="default_elevation">4dp</dimen>
 </resources>

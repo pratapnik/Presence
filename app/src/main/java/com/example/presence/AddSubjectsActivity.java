@@ -18,6 +18,7 @@ import com.example.presence.adapters.SubjectAdapter;
 import com.example.presence.database.Subject;
 import com.example.presence.database.SubjectViewModel;
 import com.example.presence.widgets.AddSubjectDialog;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -25,11 +26,11 @@ import java.util.List;
 
 public class AddSubjectsActivity extends AppCompatActivity implements AddSubjectDialog.SaveDetailsListener {
 
-    Button btnAddSubjects;
     AddSubjectDialog addSubjectDialog;
     SubjectViewModel subjectViewModel;
     RecyclerView rvSubjectsList;
     SubjectAdapter subjectAdapter;
+    FloatingActionButton fabAddSubject;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +43,8 @@ public class AddSubjectsActivity extends AppCompatActivity implements AddSubject
                 sharedPreferences.getInt("class_value",0));
 
         rvSubjectsList = findViewById(R.id.rvSubjectsList);
+        fabAddSubject = findViewById(R.id.fabAddSubject);
+
         subjectAdapter = new SubjectAdapter(this);
         rvSubjectsList.setAdapter(subjectAdapter);
         rvSubjectsList.setLayoutManager(new LinearLayoutManager(this));
@@ -55,13 +58,13 @@ public class AddSubjectsActivity extends AppCompatActivity implements AddSubject
             }
         });
 
-        btnAddSubjects = findViewById(R.id.btnAddSubjects);
-        btnAddSubjects.setOnClickListener(new View.OnClickListener() {
+        fabAddSubject.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openAddSubjectsDialog();
             }
         });
+
     }
 
     private void openAddSubjectsDialog() {

@@ -6,39 +6,40 @@
     android:layout_height="match_parent"
     tools:context=".AddSubjectsActivity">
 
+    <Button
+        android:id="@+id/btnSaveDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_save_title"
+        style="@style/CustomButtonNotFilled"
+        android:layout_margin="@dimen/margin_add_subjects_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvSubjectsList"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_margin="@dimen/margin_add_subjects_button"
-        app:layout_constraintBottom_toTopOf="@id/glHorizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/subject_item" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/glHorizontal"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.9" />
-
-    <Button
-        android:id="@+id/btnAddSubjects"
-        style="@style/CustomButton.Filled"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margin_add_subjects_button"
-        android:drawableLeft="@drawable/ic_add"
-        android:fontFamily="@font/font_bold"
-        android:gravity="center"
-        android:text="@string/title_add_subject"
-        android:textSize="@dimen/text_sixteen_sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/glHorizontal" />
+        app:layout_constraintTop_toBottomOf="@id/btnSaveDetails"
+        tools:listitem="@layout/subject_item" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddSubject"
+        style="@style/CustomFloatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add"
+        android:tooltipText="@string/label_settings_add_subject"
+        android:layout_margin="@dimen/margin_add_subjects_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
