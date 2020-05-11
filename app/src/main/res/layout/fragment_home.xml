@@ -85,31 +85,6 @@
         app:layout_constraintTop_toBottomOf="@+id/tvHomeOverallAttendance" />
 
     <TextView
-        android:id="@+id/tvHomeSubjectHeading"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_twenty_dp"
-        android:text="Subjects"
-        android:fontFamily="@font/font_bold"
-        android:textSize="@dimen/text_sixteen_sp"
-        app:layout_constraintStart_toStartOf="@+id/glVerticalLeft"
-        app:layout_constraintTop_toBottomOf="@+id/btnPrevAttendance" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvHomeSubjects"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_twelve_dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvHomeSubjectHeading"
-        app:reverseLayout="true"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:itemCount="5"
-        tools:listitem="@layout/home_subject_item" />
-
-    <TextView
         android:id="@+id/tvHomeAttendanceHeading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -118,7 +93,7 @@
         android:text="Today"
         android:textSize="@dimen/text_sixteen_sp"
         app:layout_constraintStart_toStartOf="@+id/glVerticalLeft"
-        app:layout_constraintTop_toBottomOf="@+id/rvHomeSubjects" />
+        app:layout_constraintTop_toBottomOf="@+id/btnPrevAttendance" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvHomeToday"
